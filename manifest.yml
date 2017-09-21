@@ -1,0 +1,22 @@
+---
+memory: 1G
+instances: 1
+applications:
+- name: album-service-p
+  route: movie-fun-app-seokwon.apps.longs.pal.pivotal.io
+  path: applications/album-service/build/libs/album-service-1.1.0-SNAPSHOT.jar
+  services:
+  - album-database
+
+- name: movie-service-p
+  path: applications/movie-service/build/libs/movie-service-1.1.0-SNAPSHOT.jar
+  route: movie-fun-app-seokwon.apps.longs.pal.pivotal.io
+  services:
+  - movie-database
+
+- name: movie-fun-app-p
+  path: applications/movie-fun-app/build/libs/movie-fun-app-1.1.0-SNAPSHOT.war
+  route: movie-fun-app-seokwon.apps.longs.pal.pivotal.io
+  env:
+    ALBUMS_URL: http://album-service-p.apps.longs.pal.pivotal.io/albums
+    MOVIES_URL: http://movie-service-p.apps.longs.pal.pivotal.io/movies
