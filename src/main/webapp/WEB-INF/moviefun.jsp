@@ -50,7 +50,7 @@
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse"
          data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-          class="icon-bar"></span> <span class="icon-bar"></span>
+              class="icon-bar"></span> <span class="icon-bar"></span>
       </a> <a class="brand" href="#">Moviefun</a>
 
       <form class="navbar-form pull-right">
@@ -75,12 +75,12 @@
         method="post">
     <p>Add Movie</p>
     <input type="text" name="title" placeholder="Title" size="29"/> <input
-      type="text" name="director" placeholder="Director" size="17"/> <input
-      type="text" name="genre" placeholder="Genre" size="14"/> <input
-      type="text" name="rating" placeholder="Rating" size="7"/> <input
-      type="text" name="year" placeholder="Year" size="4"
-      style="width: 110px;"/> <input type="submit" name="action"
-                                     class="btn btn-primary" value="Add"/>
+          type="text" name="director" placeholder="Director" size="17"/> <input
+          type="text" name="genre" placeholder="Genre" size="14"/> <input
+          type="text" name="rating" placeholder="Rating" size="7"/> <input
+          type="text" name="year" placeholder="Year" size="4"
+          style="width: 110px;"/> <input type="submit" name="action"
+                                         class="btn btn-primary" value="Add"/>
   </form>
 
   <table class="table table-striped table-bordered">
@@ -103,7 +103,7 @@
         <td><c:out value="${movie.rating}"/></td>
         <td><c:out value="${movie.year}"/></td>
         <td><a href="?action=Remove&id=${movie.id}"><i
-            class="icon-trash"></i></a></td>
+                class="icon-trash"></i></a></td>
       </tr>
     </c:forEach>
     </tbody>
